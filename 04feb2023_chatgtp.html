@@ -1,0 +1,144 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>David Ing's Empty Page</title>
+  <meta name="description" content="Nothing really here as yet.">
+  <meta name="author" content="David Ing">
+
+  <meta property="og:title" content="David Ing's Empty Page">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://daviding.github.io/index.html">
+  <meta property="og:description" content="Pending. Nothing really here as yet">
+
+  <link rel="stylesheet" href="tufte.css"/>
+</head>
+
+<body>
+  <article>
+    <h1 id="tufte-css">4 Feb 2023 - ChatGPT</h1>
+    <p class="subtitle">David Ing</p>
+    <section>
+      <p>I know it can be used to cheat, but it never gets tired of answering questions. There is something nice about that. 
+        It never expresses doubt (I suppose it could, with weightings) so it does give off an air of being mansplained to.</p>
+      <p>I'm putting this here mainly because it seems a threshold is close, and it would be nice to look back.</p>
+    </section>
+    <section>
+<p>Q: What are some major papers in AI in the last 20 years?</p>
+
+<p>A: Here is a list of some influential AI papers from the last 20 years:</p>
+
+<p>&quot;Attention is All You Need&quot; (2017) - a paper introducing the Transformer architecture that revolutionized NLP tasks<br>
+&quot;Generative Adversarial Networks&quot; (2014) - a paper proposing a new framework for generating synthetic data in computer vision<br>
+&quot;Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift&quot; (2015) - a paper introducing batch normalization, a technique that helps stabilize and speed up neural network training<br>
+&quot;ImageNet Classification with Deep Convolutional Neural Networks&quot; (2012) - a paper demonstrating the power of deep convolutional neural networks for image classification tasks<br>
+&quot;Playing Atari with Deep Reinforcement Learning&quot; (2013) - a paper showing the use of deep reinforcement learning for game playing<br>
+&quot;BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding&quot; (2018) - a paper introducing BERT, a transformer-based language model that set new state-of-the-art results on a wide range of NLP tasks<br>
+&quot;Mask R-CNN&quot; (2017) - a paper proposing a new architecture for instance segmentation tasks in computer vision.<br>
+&quot;Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks&quot; (2015) - a paper introducing a novel object detection architecture that significantly reduced the time required for object detection<br>
+&quot;Dynamic Routing between Capsules&quot; (2017) - a paper introducing capsule networks, a new type of neural network architecture for image classification tasks<br>
+&quot;YOLO: Real-Time Object Detection&quot; (2015) - a paper introducing a fast and accurate object detection architecture.<br>
+Note: The list is not exhaustive and the ranking is not meant to indicate superiority.</p>
+
+<p>
+Q: Could you summarize 1?</p>
+
+<p>A: &quot;Attention is All You Need&quot; (2017) is a paper that introduces the Transformer architecture for neural networks, which revolutionized NLP tasks. The Transformer architecture replaces traditional recurrent neural networks with a self-attention mechanism, allowing the model to handle longer sequences of data more efficiently and effectively. This paper has had a significant impact on NLP research and is widely cited in the field.</p>
+
+<p>
+Q: Explain what the self-attention mechanism is</p>
+
+<p>A: The self-attention mechanism is a key component of the Transformer architecture in neural networks. It is a method for calculating the relevance of each element in a sequence with respect to all other elements in the same sequence. This is done by computing a set of attention scores, which are used to weight the contribution of each element in the final representation of the sequence.</p>
+
+<p>The self-attention mechanism operates on a sequence of vectors and can be thought of as a form of matrix multiplication. Each element in the sequence is transformed into a query, key, and value vector, and the attention scores are computed as a function of the dot product between the query and key vectors. The final representation of the sequence is obtained by summing the attention-weighted value vectors.</p>
+
+<p>This mechanism allows the model to dynamically attend to different parts of the sequence, making it possible to capture long-range dependencies and relationships between elements in the sequence. The self-attention mechanism has proven to be highly effective in NLP tasks, as it enables the model to capture semantic and syntactic information in a more expressive and efficient way than traditional recurrent neural networks.</p>
+
+<p>
+Q: Can you show a working example of an attention score?</p>
+
+<p>A: Sure! Let's say you have a sequence of 3 vectors, A, B, and C, and you want to calculate the attention scores for each vector in the sequence. Here's one way to do it:</p>
+
+<p>First, you would transform each vector into a query, key, and value vector. For example:</p>
+
+<p>A_query = W_query * A<br>
+A_key = W_key * A<br>
+A_value = W_value * A</p>
+
+<p>B_query = W_query * B<br>
+B_key = W_key * B<br>
+B_value = W_value * B</p>
+
+<p>C_query = W_query * C<br>
+C_key = W_key * C<br>
+C_value = W_value * C</p>
+
+<p>Next, you would calculate the attention scores as the dot product between the query and key vectors, divided by the square root of the dimensionality of the key vectors:</p>
+
+<p>attention_A_B = dot(A_query, B_key) / sqrt(dimensionality)<br>
+attention_A_C = dot(A_query, C_key) / sqrt(dimensionality)<br>
+attention_B_C = dot(B_query, C_key) / sqrt(dimensionality)</p>
+
+<p>Finally, you would use the attention scores as weights to calculate the attention-weighted value vectors:</p>
+
+<p>attention_weighted_A = attention_A_B * B_value + attention_A_C * C_value<br>
+attention_weighted_B = attention_B_C * C_value<br>
+attention_weighted_C = 0</p>
+
+<p>Note that the attention-weighted value vectors can be used to update the representations of the sequence elements or as input to a subsequent layer in the neural network.</p>
+
+<p>This is a simple example of how the attention mechanism works. In practice, the attention scores are calculated in a more complex way, but the basic idea remains the same.</p>
+
+<p>
+Q: What would vector A be an example of above?</p>
+
+<p>A: In the example, vector A is just a generic representation of one element in the sequence. It could represent a word, a sentence, or any other type of input data, depending on the task and the type of sequence being processed. The vector can be thought of as a fixed-length representation of the element in the sequence, where each dimension of the vector captures different aspects of the element's meaning or features.</p>
+
+<p>For example, in an NLP task, the sequence could be a sentence and the vectors could represent the word embeddings for each word in the sentence. In this case, vector A would represent one of the word embeddings in the sentence. In a computer vision task, the sequence could be an image and the vectors could represent the feature maps from a convolutional neural network. In this case, vector A would represent one of the feature maps for a particular region of the image.</p>
+
+<p>
+Q: What's a feature map for a cnn?</p>
+
+<p>A: A feature map in a Convolutional Neural Network (CNN) is a multi-dimensional representation of the features detected in an image. In a CNN, the input image is convolved with a set of filters, and the result of this convolution operation is a set of feature maps. Each feature map represents a different aspect or feature of the image, such as edges, corners, textures, or shapes.</p>
+
+<p>Each element in a feature map is a scalar value that represents the activation or response of the corresponding filter at a specific position in the input image. The filters in a CNN slide over the image and apply their weights to the image pixels, producing a scalar value for each position in the image. These scalar values are then stacked together to form a feature map.</p>
+
+<p>The feature maps are then processed by multiple layers in the CNN, such as pooling layers, fully connected layers, or additional convolutional layers, to produce a final representation of the image that can be used for classification or other tasks. The process of creating feature maps and processing them in a CNN allows the network to automatically learn complex and abstract features from the input data, making it well-suited for image classification and other computer vision tasks.</p>
+
+<p>
+Q: In an attention score how do you find which parts of the vector are the query or value etc?</p>
+
+<p>A: In an attention mechanism, the roles of the query, key, and value vectors are defined by the model architecture and the task at hand. The query, key, and value vectors are typically learned as part of the overall neural network, and their weights are learned during the training process.</p>
+
+<p>For example, in the Transformer architecture, the query and key vectors are used to compute the attention scores, while the value vector is used to produce the attention-weighted output. The query and key vectors are typically linear transformations of the input vectors, and the attention scores are computed as the dot product between the query and key vectors.</p>
+
+<p>In other attention mechanisms, the query, key, and value vectors might be learned in different ways, or their roles might be different. The key idea behind attention is that it provides a way for the model to focus on different parts of the input sequence or image in a dynamic and adaptive way, depending on the task and the input data.</p>
+
+<p>In summary, the specific roles of the query, key, and value vectors depend on the task and the model architecture, and they are learned during the training process.</p>
+
+<p>
+Q: Do you have a link to the pdf paper?</p>
+
+<p>A: I'm sorry, I wasn't specific in my previous answer. Which paper are you referring to? If you could provide the name of the paper or the authors, I would be happy to help you find a link to the pdf.</p>
+
+<p>
+Q: Attention is all you need (2017)</p>
+
+<p>A: Here is the link to the paper &quot;Attention is All You Need&quot; by Vaswani et al. (2017):<br>
+https://arxiv.org/abs/1706.03762</p>
+
+<p>
+Q: Have we been doing the Socratic teaching method here?</p>
+
+<p>A: As an AI language model, I don't follow a specific teaching method, but some aspects of the Socratic method could be seen in our conversation.</p>
+
+<p>The Socratic method is a way of teaching that involves asking questions to stimulate critical thinking and encourage the discovery of new ideas and knowledge. By asking questions and guiding the conversation, the teacher helps the student arrive at a deeper understanding of the subject.</p>
+
+<p>In a similar way, by answering your questions and clarifying your understanding, I am helping you gain a deeper understanding of the topics you're interested in. However, I'm not engaged in a philosophical dialogue or attempting to challenge your beliefs like in the traditional Socratic method. My goal is to provide accurate and relevant information in response to your questions.</p>
+    </section>
+  </article>
+</body>
+</html>
